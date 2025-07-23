@@ -1,0 +1,120 @@
+/* Global Reset and Background */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  color: white;
+  font-family: 'Comic Neue', cursive;
+  padding-top: 2rem;
+}
+
+/* Container with white border and rounded corners */
+.custom-container {
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 20px;
+  width: 400px;
+  background-color: transparent;
+  color: white;
+}
+
+/* Styled input field */
+.styled-input {
+  width: 100%;
+  padding: 12px 16px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: transparent;
+  color: white;
+  transition: all 0.3s ease;
+  outline: none;
+  box-shadow: none;
+  margin-top: 10px;
+}
+
+/* Placeholder styling */
+.styled-input::placeholder {
+  color: #aaa;
+  transition: color 0.3s ease;
+}
+
+/* Focus state with glow and placeholder animation */
+.styled-input:focus {
+  border-color: #4fc3f7;
+  background-color: transparent;
+  box-shadow: 0 0 8px rgba(79, 195, 247, 0.5);
+}
+
+.styled-input:focus::placeholder {
+  color: transparent;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-5px); }
+  40%, 80% { transform: translateX(5px); }
+}
+
+@keyframes bounce {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+@keyframes pulse-glow {
+  0% {
+    box-shadow: 0 0 5px rgba(79, 195, 247, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 15px rgba(79, 195, 247, 0.8);
+  }
+  100% {
+    box-shadow: 0 0 5px rgba(79, 195, 247, 0.3);
+  }
+}
+
+.animated-input {
+  width: 100%;
+  padding: 12px 16px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #1a1a1a;
+  color: white;
+  outline: none;
+  margin-top: 10px;
+  transition: all 0.3s ease;
+  box-shadow: none;
+}
+
+/* Placeholder styling */
+.animated-input::placeholder {
+  color: #aaa;
+  transition: color 0.3s ease;
+}
+
+/* On focus - glow, scale, bounce */
+.animated-input:focus {
+  border-color: #4fc3f7;
+  background-color: #1a1a1a;
+  animation: bounce 0.4s ease, pulse-glow 2s ease-in-out infinite;
+}
+
+/* On hover - slightly grow */
+.animated-input:hover {
+  transform: scale(1.02);
+}
+
+/* Shake when error class is applied (you can control this in JS/React) */
+.animated-input.error {
+  animation: shake 0.4s ease;
+}
+
+/* Optional: hide placeholder on focus */
+.animated-input:focus::placeholder {
+  color: transparent;
+}
