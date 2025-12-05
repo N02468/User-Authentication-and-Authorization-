@@ -15,7 +15,7 @@ const Register = () => {
     cnic: '',
     address: '',
     password: '',
-    role: 'user'
+    role: role // <-- take from req.body
   });
 
   const [isShowPassword, setIsShowPassword] = useState(false);
