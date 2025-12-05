@@ -6,7 +6,7 @@ const registerUser = async (req, res) => {
   try {
     console.log('Incoming Data:', req.body);
 
-    const { name, username, email, phoneNumber, cnic, address, password } = req.body;
+    const { name, username, email, phoneNumber, cnic, address, password, role } = req.body;
 
     if (!name || !username || !email || !password || !phoneNumber || !cnic) {
       return res.status(400).json({ message: 'All fields are required' });
