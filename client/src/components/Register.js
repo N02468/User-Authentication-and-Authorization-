@@ -131,6 +131,7 @@ const Register = () => {
 
         {/* Role Dropdown */}
         <select
+          id="role"   
           name="role"
           value={formData.role}
           onChange={handleChange}
