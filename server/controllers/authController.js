@@ -25,6 +25,7 @@ const registerUser = async (req, res) => {
       cnic,
       address,
       password: hashedPassword,
+      role: role || 'user' // fallback to 'user' only if role is missing
     });
 
     await newUser.save();
