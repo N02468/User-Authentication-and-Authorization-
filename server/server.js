@@ -25,6 +25,25 @@ app.use('/api/auth', authRoute);
 app.listen(process.env.PORT, () => console.log(`Server running on port ${process.env.PORT}`));
 
 app.get("/", (req, res) => {
-  res.send("API is running successfully 🚀");
+  res.send(`
+      <style>
+        body {
+          font-family: 'Comic-Neue', cursive;
+          margin: 40px;
+          background-color: black;
+          color: white;
+
+          
+        }
+        h1 {
+          color: #007BFF;
+          font-weight:bolder;
+        }
+        p {
+          font-size: 18px;
+        }
+      </style>
+      <h1>API is running successfully 🚀</h1>
+      `);
 });
 
